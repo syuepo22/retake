@@ -1,0 +1,75 @@
+API1: 搜尋課程 (依課程名稱)
+URL:
+http://localhost:8000/api/courses/search/?course_name=Introduction%20to%20Comp
+Method: GET
+Headers:
+Content-Type: application/json
+Request Body:
+json
+{
+ "course_name": "Introduction to Computer Science",
+ "instructor_id": "1",
+ "syllabus": "Course Syllabus Here",
+ "course_content": "Detailed course content here",
+ "semester_id": "2021"
+}
+API2: 搜尋課程 (依講師 ID)
+URL: http://localhost:8000/api/courses/search/?instructor_id=1
+Method: GET
+Headers:
+Content-Type: application/json
+Request Body:
+json
+{
+ "course_name": "Introduction to Computer Science",
+ "instructor_id": "1",
+ "syllabus": "Course Syllabus Here",
+ "course_content": "Detailed course content here",
+ "semester_id": "2021"
+}
+API3: 搜尋課程 (依講師 ID 及課程內容)
+URL:
+http://localhost:8000/api/courses/search/?instructor_id=1&%22course_content%22%3A%
+20%22Detailed%20course%20cont%22%2C=null
+Method: GET
+Headers:
+Content-Type: application/json
+Request Body:
+json
+{
+ "course_name": "Introduction to Computer Science",
+ "instructor_id": "1",
+ "syllabus": "Course Syllabus Here",
+ "course_content": "Detailed course content here",
+ "semester_id": "2021"
+}
+API4: 註冊課程
+URL: http://localhost:8000/api/enrollments
+Method: POST
+Headers:
+Content-Type: application/json
+Request Body:
+json
+{
+ "course_name": "Introduction to Computer Science123",
+ "instructor_id": "1",
+ "syllabus": "Course Syllabus Here",
+ "course_content": "Detailed course content here",
+ "semester_id": "2021"
+}
+API5: 刪除註冊課程
+URL: http://localhost:8000/api/enrollments/1
+Method: DELETE
+Headers:
+Content-Type: application/json
+Request Body: 無
+API6: 更新註冊課程
+URL: http://localhost:8000/api/enrollments/1
+Method: PATCH
+Headers:
+Content-Type: application/json
+Request Body:
+json
+{
+ "course_name": "123Introduction to Computer Science123"
+}
